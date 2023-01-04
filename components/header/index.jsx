@@ -8,6 +8,7 @@ import {
 	getWeekOfYear,
 	getYear,
 } from "../../date-utils";
+import { getParameter } from "../../params";
 import * as classes from "./styles.module.css";
 
 export default function Header({
@@ -18,6 +19,7 @@ export default function Header({
 	linkToMonth = true,
 	linkToWeek = true,
 }) {
+	let handedness = getParameter("handedness", "right");
 	return (
 		<>
 			<header class={classes.header}>
@@ -34,7 +36,12 @@ export default function Header({
 					<a href={`#w${getWeekOfYear(date)}`}>Week {getWeekOfYear(date)}</a>
 				) : null}
 				<span class={classes.title}>{titleFormatter(date)}</span>
-				<span class={classes.closebtn} />
+				<span
+					class={[
+						classes.closebtn,
+						handedness === "left" ? classes.lefthanded : "",
+					].join(" ")}
+				/>
 			</header>
 			<header class={[classes.header, classes.forwardlinks].join(" ")}>
 				<span>

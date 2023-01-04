@@ -12,6 +12,10 @@
 		margin: 1em auto;
 		padding-left: 1.4cm;
 	}
+	.page.lefthanded {
+		padding-right: 1.4cm;
+		padding-left: 0;
+	}
 }
 
 @media print {
@@ -23,5 +27,11 @@
 		margin: 0;
 		margin-left: 1.4cm;
 		size: A5;
+	}
+	.lefthanded {
+		@page {
+			margin-right: 1.4cm;
+			margin-right: 0;
+		}
 	}
 }

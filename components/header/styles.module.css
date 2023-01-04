@@ -17,6 +17,10 @@
 	width: 0.7cm;
 }
 
+.closebtn.lefthanded {
+	order: -1;
+}
+
 .forwardlinks {
 	justify-content: space-between;
 	border: none;
