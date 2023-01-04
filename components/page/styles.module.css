@@ -10,7 +10,7 @@
 		width: calc(100vmin / 1.414);
 		height: 100vmin;
 		margin: 1em auto;
-		padding-left: 1.4cm;
+		padding-right: 1.4cm;
 	}
 }
 
@@ -21,7 +21,7 @@
 	}
 	@page {
 		margin: 0;
-		margin-left: 1.4cm;
+		margin-right: 1.4cm;
 		size: A5;
 	}
 }
